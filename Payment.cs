@@ -2,7 +2,7 @@ using System;
 
 namespace Payroll
 {
-    // Класс для расчета зарплаты сотрудника за месяц.
+    // Класс для расчета зарплаты сотрудника за месяц
     public class Payment
     {
         private const decimal PensionFundPercent = 1m;

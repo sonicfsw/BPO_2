@@ -7,7 +7,7 @@ class Program
     {
         var payment = new Payment(
             fullName: "Иванов Иван Иванович",
-            salary: 50000m,
+            salary: 60000m,
             hireYear: 2018,
             allowancePercent: 10m,
             daysWorked: 20,
