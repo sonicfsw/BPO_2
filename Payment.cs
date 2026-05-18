@@ -44,8 +44,10 @@ namespace Payroll
 
         public decimal CalculateAccrued()
         {
+            // Перед расчетом проверяем корректность исходных данных.
             Validate();
 
+            // Начисление считается пропорционально отработанным дням с учетом надбавки.
             decimal basePay = Salary * DaysWorked / (decimal)WorkingDaysInMonth;
             decimal allowance = basePay * AllowancePercent / 100m;
 
@@ -55,6 +57,7 @@ namespace Payroll
 
         public decimal CalculateWithheld()
         {
+            // Удержания состоят из взноса в пенсионный фонд и подоходного налога.
             decimal accrued = CalculateAccrued();
             decimal pensionFund = accrued * PensionFundPercent / 100m;
 
@@ -65,12 +68,14 @@ namespace Payroll
 
         public decimal CalculateNet()
         {
+            // Сумма к выдаче равна начислениям за вычетом удержаний.
             CalculateWithheld();
             return Math.Round(AccruedAmount - WithheldAmount, 2);
         }
 
         public int CalculateExperience()
         {
+            // Стаж определяется как разница между текущим годом и годом приема на работу.
             int currentYear = DateTime.Now.Year;
             int experience = currentYear - HireYear;
 
@@ -96,6 +101,7 @@ namespace Payroll
 
         private void Validate()
         {
+            // Метод выбрасывает исключения, если данные не подходят для расчета.
             if (string.IsNullOrWhiteSpace(FullName))
                 throw new ArgumentException("ФИО не может быть пустым.");
 

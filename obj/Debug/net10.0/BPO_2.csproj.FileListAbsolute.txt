@@ -12,3 +12,4 @@
 /Users/sonic_fsw/Documents/BPO_2/obj/Debug/net10.0/BPO_2.pdb
 /Users/sonic_fsw/Documents/BPO_2/obj/Debug/net10.0/BPO_2.genruntimeconfig.cache
 /Users/sonic_fsw/Documents/BPO_2/obj/Debug/net10.0/ref/BPO_2.dll
+/Users/sonic_fsw/Documents/BPO_2/obj/Debug/net10.0/BPO_2.sourcelink.json
